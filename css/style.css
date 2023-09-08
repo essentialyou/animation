@@ -1,0 +1,148 @@
+
+.z-3
+{
+    z-index: 10000;
+}
+
+.justity-self-start
+{
+    justify-self: start;
+}
+
+.about-part-1
+{
+    opacity: 0;
+    z-index: -9;
+    animation-duration: 2s !important;
+}
+
+.about-part-1.animate__animated
+{
+    opacity: 1;
+}
+
+.about-part-2
+{
+    opacity: 0;
+    z-index: -9;
+    animation-duration: 2s !important;
+}
+
+.about-part-2.animate__animated
+{
+    opacity: 1;
+}
+
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+}
+
+.animate__zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    animation-duration: 2s;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3,.3,.3);
+        transform: scale3d(.3,.3,.3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+
+@keyframes fadeInUp { 
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,100%,0);
+        transform: translate3d(0,100%,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.link
+{
+    transition: .5s !important;
+    font-weight: 400;
+}
+
+.link:hover
+{
+    color: #3d0fc7 !important;
+}
+
+#fan
+{
+    transition: .3s;
+    z-index: -9;
+}
+
+.service-section
+{
+    z-index: -9;
+}
+
+
+.service-container
+{
+    height: 80vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.service-container::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+.service-container::-webkit-scrollbar-thumb {
+    background: grey; 
+    border-radius: 10px;
+}
+
+.service-container::-webkit-scrollbar-thumb:hover {
+    background: #3d0fc7; 
+}
+
+
+.service-box
+{
+    height: 80vh;
+    /* border: 1px solid blue; */
+    justify-content: center;
+    padding: 0rem 2rem;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+@media(max-width: 767px){
+    .about-section .w-50
+    {
+        width: 100% !important;
+    }
+
+    .service-container
+    {
+        height: 100vh;
+    }
+    
+    .service-box
+    {
+        height: 100vh;
+    }
+}
